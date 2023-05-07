@@ -69,8 +69,8 @@ def update_broker(d=datetime.now()):
                     start_row =999
                     end_flag = False
                     try:
-                            buy_price = float(df[df[0]=='平均買超成本'][1])
-                            sell_price = float(df[df[0]=='平均買超成本'][6])
+                            buy_price = float(df[df[0]=='平均買超成本'][1].values[0])
+                            sell_price = float(df[df[0]=='平均買超成本'][6].values[0])
                     except:
                         print("無平均成本", warrant_vol_URI)
                         break
@@ -103,3 +103,5 @@ update_broker(parse('2023-5-5'))
 
 
 
+
+# %%
