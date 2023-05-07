@@ -6,7 +6,7 @@ import math
 import random
 import re
 #Write records to sqlite
-import sqlite3
+#import sqlite3
 
 
 # %%
