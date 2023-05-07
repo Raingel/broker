@@ -54,7 +54,7 @@ def update_broker(d=datetime.now()):
     warrants['權證代號'] = warrants['權證代號'].str.replace('"','')
     warrants['標的代號'] = warrants['標的代號'].str.replace('"','')
 
-    for index, warrant_row in warrants[0:100].iterrows():
+    for index, warrant_row in warrants[:].iterrows():
         # 2023-5-5 without preceding 0
         ds = f"{d.year}-{d.month}-{d.day}"
         try_counter = 3
