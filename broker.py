@@ -96,7 +96,7 @@ def update_broker(d=datetime.now()):
     warrants['標的代號'] = warrants['標的代號'].str.replace('"','')
     with concurrent.futures.ThreadPoolExecutor() as executor:
         futures = []
-        for index, warrant_row in warrants[100:150].iterrows():
+        for index, warrant_row in warrants[:].iterrows():
                 # 2023-5-5 without preceding 0
                 ds = f"{d.year}-{d.month}-{d.day}"
                 future = executor.submit(fetch, SERVER, warrant_row, ds, headers)
