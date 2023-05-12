@@ -114,7 +114,7 @@ def update_broker(d=datetime.now()):
 
 # %%
 from dateutil.parser import parse
-update_broker(parse('2023-5-11'))
+#update_broker(parse('2023-5-11'))
 update_broker(datetime.today())
 
 
